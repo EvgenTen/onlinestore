@@ -13,4 +13,7 @@ public class PageController {
 		mv.addObject("greeting", "Welcome to Spring");
 		return mv;
 	}
+	
 }
+	
+
