@@ -43,7 +43,7 @@ public class PageController {
 	}
 	
 	/*
-	 * Meyhods to load all products and based on category
+	 * Methods to load all products and based on category
 	 * */
 	@RequestMapping(value = "show/all/products")
 	public ModelAndView showAllProducts() {
@@ -52,7 +52,7 @@ public class PageController {
 		
 		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
-		mv.addObject("userClickProducts", true);
+		mv.addObject("userClickAllProducts", true);
 		return mv;
 	}
 	
@@ -64,11 +64,16 @@ public class PageController {
 		Category category = null;
 		category = categoryDAO.get(id);
 		
-		mv.addObject("title", "All products");
+		mv.addObject("title", category.getName());
 		
 		//passing the list of categories
 		mv.addObject("categories", categoryDAO.list());
-		mv.addObject("userClickProducts", true);
+		
+		//passing the single category object
+		mv.addObject("category", category);
+
+		
+		mv.addObject("userClickCategoryProducts", true);
 		return mv;
 	}
 }

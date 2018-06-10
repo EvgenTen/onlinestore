@@ -2,7 +2,6 @@ package com.evgen.shoppingbackend.daoimpl;
 
 import java.util.ArrayList;
 import java.util.List;
-
 import org.springframework.stereotype.Repository;
 import com.evgen.shoppingbackend.dao.CategoryDAO;
 import com.evgen.shoppingbackend.dto.Category;
