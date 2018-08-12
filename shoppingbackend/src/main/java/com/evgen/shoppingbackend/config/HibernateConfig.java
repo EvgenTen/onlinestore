@@ -15,7 +15,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @ComponentScan(basePackages = {"com.evgen.shoppingbackend.dto"})
-@EnableTransactionManagement
+@EnableTransactionManagement 
 public class HibernateConfig {
 
 	// DB Params
